@@ -22,11 +22,10 @@ public class Table2Controller {
         return table2Service.getAllCalibrationDataByGroupId(groupId);
     }
 
-    @PostMapping(value = "/create")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void createTable2(@RequestBody List<Table2> list){
         table2Service.createTable2(list);
     }
-
 
 }

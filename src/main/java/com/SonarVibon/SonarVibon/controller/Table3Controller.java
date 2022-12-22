@@ -21,7 +21,7 @@ public class Table3Controller {
         return table3Service.getAllHookeDataByGroupId(groupId);
     }
 
-    @PostMapping(value = "/create")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void createTable3(@RequestBody List<Table3> list){
         table3Service.createTable3(list);
