@@ -14,4 +14,13 @@ public interface IdentificationRepository extends JpaRepository<Identification,S
     @Query("SELECT f FROM Identification f where f.numbers like %:number%")
     List<Identification> getIdentificationByNumbers(@Param("number") String number);
 
+    @Query("SELECT f FROM Identification f where f.turma like %:turma%")
+    List<Identification> getIdentificationByClass(@Param("turma") String turma);
+
+    @Query("SELECT f FROM Identification f where f.grupo like %:grupo%")
+    List<Identification> getIdentificationByGroup(@Param("grupo") String grupo);
+
+    @Query("SELECT f FROM Identification f where f.turma like %:turma% AND f.grupo like %:grupo%")
+    List<Identification> getIdentificationByClassAndGroup(@Param("turma") String turma,@Param("grupo") String grupo);
+
 }

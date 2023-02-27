@@ -17,6 +17,11 @@ public class Table4Service {
     }
 
     public Table4 createTable4(Table4 table4){
+        if (table4.getOpen().equals("") || table4.getOpen().equals("OPEN")){
+            table4.setOpen("OPEN");
+        }else{
+            table4.setOpen("CLOSED");
+        }
         return table4Repository.save(table4);
     }
 

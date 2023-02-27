@@ -27,5 +27,18 @@ public class IdentificationController {
         return identificationService.getIdentificationByNumber(number);
     }
 
+    @GetMapping(value = "/class/search")
+    public Iterable<Identification> getIdentificationByClass(@RequestParam("class") final String turma){
+        return identificationService.getIdentificationByClass(turma);
+    }
 
+    @GetMapping(value = "/group/search")
+    public Iterable<Identification> getIdentificationByGroup(@RequestParam("group") final String grupo){
+        return identificationService.getIdentificationByGroup(grupo);
+    }
+
+    @GetMapping(value = "/class/{turma}/group/{grupo}")
+    public Iterable<Identification> getIdentificationByClassAndGroup(@PathVariable("turma") final String turma,@PathVariable("grupo") final String grupo){
+        return identificationService.getIdentificationByClassAndGroup(turma,grupo);
+    }
 }

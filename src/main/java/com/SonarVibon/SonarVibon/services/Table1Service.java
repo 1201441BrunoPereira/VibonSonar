@@ -16,6 +16,11 @@ public class Table1Service {
     }
 
     public Table1 create(Table1 table){
+        if (table.getOpen().equals("") || table.getOpen().equals("OPEN")){
+            table.setOpen("OPEN");
+        }else{
+            table.setOpen("CLOSED");
+        }
         return table1Repository.save(table);
     }
 

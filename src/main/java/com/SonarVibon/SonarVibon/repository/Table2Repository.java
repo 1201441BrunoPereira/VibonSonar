@@ -1,6 +1,5 @@
 package com.SonarVibon.SonarVibon.repository;
 
-
 import com.SonarVibon.SonarVibon.model.Table2;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -12,7 +11,9 @@ import java.util.List;
 public interface Table2Repository extends JpaRepository<Table2,String> {
 
     @Query("SELECT f FROM Table2 f where f.groupId = :groupId")
-    List<Table2> getAllCalibrationDataByGroupId(@Param("groupId") String groupId);
+    Table2 getCalibrationDataByGroupId(@Param("groupId") String groupId);
 
+    @Query("SELECT f FROM Table2 f where f.open = :open")
+    List<Table2> getAllOpen(@Param("open") String open);
 
 }

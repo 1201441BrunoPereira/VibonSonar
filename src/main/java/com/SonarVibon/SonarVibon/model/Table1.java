@@ -9,30 +9,34 @@ import javax.persistence.Table;
 @Table(name = "table1")
 public class Table1 {
 
+    @Column
+    private String open;
+
     @Id
     @Column(name = "ID", nullable = false, length = 36)
     private String groupId ;
 
     @Column
-    private Float thermometerResolution;
+    private String thermometerResolution;
 
     @Column
-    private Float tapeResolution;
+    private String tapeResolution;
 
     @Column
-    private Float scaleResolution;
+    private String scaleResolution;
 
     @Column
-    private Float thermometerUncertainty;
+    private String thermometerUncertainty;
 
     @Column
-    private Float tapeUncertainty;
+    private String tapeUncertainty;
 
     @Column
-    private Float scaleUncertainty;
+    private String scaleUncertainty;
 
 
-    public Table1(String groupId, Float thermometerResolution, Float tapeResolution, Float scaleResolution, Float thermometerUncertainty, Float tapeUncertainty, Float scaleUncertainty) {
+    public Table1(String open, String groupId, String thermometerResolution, String tapeResolution, String scaleResolution, String thermometerUncertainty, String tapeUncertainty, String scaleUncertainty) {
+        this.open = open;
         this.groupId = groupId;
         this.thermometerResolution = thermometerResolution;
         this.tapeResolution = tapeResolution;
@@ -45,6 +49,14 @@ public class Table1 {
     public Table1() {
     }
 
+    public String getOpen() {
+        return open;
+    }
+
+    public void setOpen(String open) {
+        this.open = open;
+    }
+
     public String getGroupId() {
         return groupId;
     }
@@ -53,51 +65,51 @@ public class Table1 {
         this.groupId = groupId;
     }
 
-    public Float getThermometerResolution() {
+    public String getThermometerResolution() {
         return thermometerResolution;
     }
 
-    public void setThermometerResolution(Float thermometerResolution) {
+    public void setThermometerResolution(String thermometerResolution) {
         this.thermometerResolution = thermometerResolution;
     }
 
-    public Float getTapeResolution() {
+    public String getTapeResolution() {
         return tapeResolution;
     }
 
-    public void setTapeResolution(Float tapeResolution) {
+    public void setTapeResolution(String tapeResolution) {
         this.tapeResolution = tapeResolution;
     }
 
-    public Float getScaleResolution() {
+    public String getScaleResolution() {
         return scaleResolution;
     }
 
-    public void setScaleResolution(Float scaleResolution) {
+    public void setScaleResolution(String scaleResolution) {
         this.scaleResolution = scaleResolution;
     }
 
-    public Float getThermometerUncertainty() {
+    public String getThermometerUncertainty() {
         return thermometerUncertainty;
     }
 
-    public void setThermometerUncertainty(Float thermometerUncertainty) {
+    public void setThermometerUncertainty(String thermometerUncertainty) {
         this.thermometerUncertainty = thermometerUncertainty;
     }
 
-    public Float getTapeUncertainty() {
+    public String getTapeUncertainty() {
         return tapeUncertainty;
     }
 
-    public void setTapeUncertainty(Float tapeUncertainty) {
+    public void setTapeUncertainty(String tapeUncertainty) {
         this.tapeUncertainty = tapeUncertainty;
     }
 
-    public Float getScaleUncertainty() {
+    public String getScaleUncertainty() {
         return scaleUncertainty;
     }
 
-    public void setScaleUncertainty(Float scaleUncertainty) {
+    public void setScaleUncertainty(String scaleUncertainty) {
         this.scaleUncertainty = scaleUncertainty;
     }
 }

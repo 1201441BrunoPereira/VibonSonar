@@ -9,61 +9,63 @@ import javax.persistence.Table;
 @Table(name = "table4")
 public class Table4 {
 
+    private String open;
+
     @Id
     @Column(name = "ID", nullable = false, length = 36)
     private String groupId ;
 
     @Column
-    private Float roomTemperature;
+    private String roomTemperature;
 
     @Column
-    private Float roomTemperatureRelUncer;
+    private String roomTemperatureRelUncer;
 
     @Column
-    private Float roomTemperatureStandUncer;
+    private String roomTemperatureStandUncer;
 
     @Column
-    private Float soundSpeedRef;
+    private String soundSpeedRef;
 
     @Column
-    private Float soundSpeedRefRelUncer;
+    private String soundSpeedRefRelUncer;
 
     @Column
-    private Float soundSpeedRefStandUncer;
+    private String soundSpeedRefStandUncer;
 
     @Column
-    private Float slope;
+    private String slope;
 
-    private Float slopeRelUncer;
-
-    @Column
-    private Float slopeStandUncer;
+    private String slopeRelUncer;
 
     @Column
-    private Float origin;
-
-    private Float originRelUncer;
+    private String slopeStandUncer;
 
     @Column
-    private Float originStandUncer;
+    private String origin;
+
+    private String originRelUncer;
 
     @Column
-    private Float correlationCoefficient;
+    private String originStandUncer;
 
     @Column
-    private Float soundSpeedExp;
+    private String correlationCoefficient;
 
     @Column
-    private Float soundSpeedExpRelUncer;
+    private String soundSpeedExp;
 
     @Column
-    private Float soundSpeedExpStandUncer;
+    private String soundSpeedExpRelUncer;
 
     @Column
-    private Float relativeDeviation;
+    private String soundSpeedExpStandUncer;
+
+    @Column
+    private String relativeDeviation;
 
 
-    public Table4(String groupId, Float roomTemperature, Float roomTemperatureRelUncer, Float roomTemperatureStandUncer, Float soundSpeedRef, Float soundSpeedRefRelUncer, Float soundSpeedRefStandUncer, Float slope, Float slopeRelUncer, Float slopeStandUncer, Float origin, Float originRelUncer, Float originStandUncer, Float correlationCoefficient, Float soundSpeedExp, Float soundSpeedExpRelUncer, Float soundSpeedExpStandUncer, Float relativeDeviation) {
+    public Table4(String open, String groupId, String roomTemperature, String roomTemperatureRelUncer, String roomTemperatureStandUncer, String soundSpeedRef, String soundSpeedRefRelUncer, String soundSpeedRefStandUncer, String slope, String slopeRelUncer, String slopeStandUncer, String origin, String originRelUncer, String originStandUncer, String correlationCoefficient, String soundSpeedExp, String soundSpeedExpRelUncer, String soundSpeedExpStandUncer, String relativeDeviation) {
         this.groupId = groupId;
         this.roomTemperature = roomTemperature;
         this.roomTemperatureRelUncer = roomTemperatureRelUncer;
@@ -87,6 +89,14 @@ public class Table4 {
     public Table4() {
     }
 
+    public String getOpen() {
+        return open;
+    }
+
+    public void setOpen(String open) {
+        this.open = open;
+    }
+
     public String getGroupId() {
         return groupId;
     }
@@ -95,139 +105,139 @@ public class Table4 {
         this.groupId = groupId;
     }
 
-    public Float getRoomTemperature() {
+    public String getRoomTemperature() {
         return roomTemperature;
     }
 
-    public void setRoomTemperature(Float roomTemperature) {
+    public void setRoomTemperature(String roomTemperature) {
         this.roomTemperature = roomTemperature;
     }
 
-    public Float getRoomTemperatureRelUncer() {
+    public String getRoomTemperatureRelUncer() {
         return roomTemperatureRelUncer;
     }
 
-    public void setRoomTemperatureRelUncer(Float roomTemperatureRelUncer) {
+    public void setRoomTemperatureRelUncer(String roomTemperatureRelUncer) {
         this.roomTemperatureRelUncer = roomTemperatureRelUncer;
     }
 
-    public Float getRoomTemperatureStandUncer() {
+    public String getRoomTemperatureStandUncer() {
         return roomTemperatureStandUncer;
     }
 
-    public void setRoomTemperatureStandUncer(Float roomTemperatureStandUncer) {
+    public void setRoomTemperatureStandUncer(String roomTemperatureStandUncer) {
         this.roomTemperatureStandUncer = roomTemperatureStandUncer;
     }
 
-    public Float getSoundSpeedRef() {
+    public String getSoundSpeedRef() {
         return soundSpeedRef;
     }
 
-    public void setSoundSpeedRef(Float soundSpeedRef) {
+    public void setSoundSpeedRef(String soundSpeedRef) {
         this.soundSpeedRef = soundSpeedRef;
     }
 
-    public Float getSoundSpeedRefRelUncer() {
+    public String getSoundSpeedRefRelUncer() {
         return soundSpeedRefRelUncer;
     }
 
-    public void setSoundSpeedRefRelUncer(Float soundSpeedRefRelUncer) {
+    public void setSoundSpeedRefRelUncer(String soundSpeedRefRelUncer) {
         this.soundSpeedRefRelUncer = soundSpeedRefRelUncer;
     }
 
-    public Float getSoundSpeedRefStandUncer() {
+    public String getSoundSpeedRefStandUncer() {
         return soundSpeedRefStandUncer;
     }
 
-    public void setSoundSpeedRefStandUncer(Float soundSpeedRefStandUncer) {
+    public void setSoundSpeedRefStandUncer(String soundSpeedRefStandUncer) {
         this.soundSpeedRefStandUncer = soundSpeedRefStandUncer;
     }
 
-    public Float getSlope() {
+    public String getSlope() {
         return slope;
     }
 
-    public void setSlope(Float slope) {
+    public void setSlope(String slope) {
         this.slope = slope;
     }
 
-    public Float getSlopeRelUncer() {
+    public String getSlopeRelUncer() {
         return slopeRelUncer;
     }
 
-    public void setSlopeRelUncer(Float slopeRelUncer) {
+    public void setSlopeRelUncer(String slopeRelUncer) {
         this.slopeRelUncer = slopeRelUncer;
     }
 
-    public Float getSlopeStandUncer() {
+    public String getSlopeStandUncer() {
         return slopeStandUncer;
     }
 
-    public void setSlopeStandUncer(Float slopeStandUncer) {
+    public void setSlopeStandUncer(String slopeStandUncer) {
         this.slopeStandUncer = slopeStandUncer;
     }
 
-    public Float getOrigin() {
+    public String getOrigin() {
         return origin;
     }
 
-    public void setOrigin(Float origin) {
+    public void setOrigin(String origin) {
         this.origin = origin;
     }
 
-    public Float getOriginRelUncer() {
+    public String getOriginRelUncer() {
         return originRelUncer;
     }
 
-    public void setOriginRelUncer(Float originRelUncer) {
+    public void setOriginRelUncer(String originRelUncer) {
         this.originRelUncer = originRelUncer;
     }
 
-    public Float getOriginStandUncer() {
+    public String getOriginStandUncer() {
         return originStandUncer;
     }
 
-    public void setOriginStandUncer(Float originStandUncer) {
+    public void setOriginStandUncer(String originStandUncer) {
         this.originStandUncer = originStandUncer;
     }
 
-    public Float getCorrelationCoefficient() {
+    public String getCorrelationCoefficient() {
         return correlationCoefficient;
     }
 
-    public void setCorrelationCoefficient(Float correlationCoefficient) {
+    public void setCorrelationCoefficient(String correlationCoefficient) {
         this.correlationCoefficient = correlationCoefficient;
     }
 
-    public Float getSoundSpeedExp() {
+    public String getSoundSpeedExp() {
         return soundSpeedExp;
     }
 
-    public void setSoundSpeedExp(Float soundSpeedExp) {
+    public void setSoundSpeedExp(String soundSpeedExp) {
         this.soundSpeedExp = soundSpeedExp;
     }
 
-    public Float getSoundSpeedExpRelUncer() {
+    public String getSoundSpeedExpRelUncer() {
         return soundSpeedExpRelUncer;
     }
 
-    public void setSoundSpeedExpRelUncer(Float soundSpeedExpRelUncer) {
+    public void setSoundSpeedExpRelUncer(String soundSpeedExpRelUncer) {
         this.soundSpeedExpRelUncer = soundSpeedExpRelUncer;
     }
 
-    public Float getSoundSpeedExpStandUncer() {
+    public String getSoundSpeedExpStandUncer() {
         return soundSpeedExpStandUncer;
     }
 
-    public void setSoundSpeedExpStandUncer(Float soundSpeedExpStandUncer) {
+    public void setSoundSpeedExpStandUncer(String soundSpeedExpStandUncer) {
         this.soundSpeedExpStandUncer = soundSpeedExpStandUncer;
     }
 
-    public Float getRelativeDeviation() {
+    public String getRelativeDeviation() {
         return relativeDeviation;
     }
 
-    public void setRelativeDeviation(Float relativeDeviation) {
+    public void setRelativeDeviation(String relativeDeviation) {
         this.relativeDeviation = relativeDeviation;
     }
 }

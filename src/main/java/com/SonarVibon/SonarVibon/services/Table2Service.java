@@ -1,11 +1,11 @@
 package com.SonarVibon.SonarVibon.services;
 
+
 import com.SonarVibon.SonarVibon.model.Table2;
 import com.SonarVibon.SonarVibon.repository.Table2Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 @Service
 public class Table2Service {
@@ -13,16 +13,17 @@ public class Table2Service {
     @Autowired
     private Table2Repository table2Repository;
 
-    public List<Table2> getAllCalibrationDataByGroupId(String groupID){
-        return table2Repository.getAllCalibrationDataByGroupId(groupID);
+    public Table2 getAllCalibrationDataByGroupId(String groupID){
+        return table2Repository.getCalibrationDataByGroupId(groupID);
     }
 
-    public void createTable2(List<Table2> list){
-        for (int i=0;i< list.size();i++){
-            Table2 table= list.get(i);
-            table.setTable2Id();
-            table2Repository.save(table);
+    public Table2 create(Table2 table){
+        if (table.getOpen().equals("") || table.getOpen().equals("OPEN")){
+            table.setOpen("OPEN");
+        }else{
+            table.setOpen("CLOSED");
         }
+        return table2Repository.save(table);
     }
 
 }

@@ -10,113 +10,116 @@ import javax.persistence.Table;
 @Table(name = "table6")
 public class Table6 {
 
+    private String open;
+
     @Id
     @Column(name = "ID", nullable = false, length = 36)
     private String groupId ;
 
     @Column
-    private Float mass;
+    private String mass;
 
     @Column
-    private Float massRelUncer;
+    private String massRelUncer;
 
     @Column
-    private Float massStandUncer;
+    private String massStandUncer;
 
     @Column
-    private Float totalMass;
+    private String totalMass;
 
     @Column
-    private Float totalMassRelUncer;
+    private String totalMassRelUncer;
 
     @Column
-    private Float totalMassStandUncer;
+    private String totalMassStandUncer;
 
     @Column
-    private Float distance;
+    private String distance;
 
     @Column
-    private Float distanceRelUncer;
+    private String distanceRelUncer;
 
     @Column
-    private Float distanceStandUncer;
+    private String distanceStandUncer;
 
     @Column
-    private Float tZeros;
+    private String tZeros;
 
     @Column
-    private Float tZerosRelUncer;
+    private String tZerosRelUncer;
 
     @Column
-    private Float tZerosStandUncer;
+    private String tZerosStandUncer;
 
     @Column
-    private Float tPeaks;
+    private String tPeaks;
 
     @Column
-    private Float tPeaksRelUncer;
+    private String tPeaksRelUncer;
 
     @Column
-    private Float tPeaksStandUncer;
+    private String tPeaksStandUncer;
 
     @Column
-    private Float relativeDeviation;
+    private String relativeDeviation;
 
     @Column
-    private Float damping;
+    private String damping;
 
     @Column
-    private Float dampingRelUncer;
+    private String dampingRelUncer;
 
     @Column
-    private Float dampingStandUncer;
+    private String dampingStandUncer;
 
     @Column
-    private Float ownFrequency;
+    private String ownFrequency;
 
     @Column
-    private Float ownFrequencyRelUncer;
+    private String ownFrequencyRelUncer;
 
     @Column
-    private Float ownFrequencyStandUncer;
+    private String ownFrequencyStandUncer;
 
     @Column
-    private Float oscillationFrequency;
+    private String oscillationFrequency;
 
     @Column
-    private Float oscillationFrequencyRelUncer;
+    private String oscillationFrequencyRelUncer;
 
     @Column
-    private Float oscillationFrequencyStandUncer;
+    private String oscillationFrequencyStandUncer;
 
     @Column
-    private Float oscillationPeriod;
+    private String oscillationPeriod;
 
     @Column
-    private Float oscillationPeriodRelUncer;
+    private String oscillationPeriodRelUncer;
 
     @Column
-    private Float oscillationPeriodStandUncer;
+    private String oscillationPeriodStandUncer;
 
     @Column
-    private Float qualityFactor;
+    private String qualityFactor;
 
     @Column
-    private Float qualityFactorRelUncer;
+    private String qualityFactorRelUncer;
 
     @Column
-    private Float qualityFactorStandUncer;
+    private String qualityFactorStandUncer;
 
     @Column
-    private Float decay;
+    private String decay;
 
     @Column
-    private Float decayRelUncer;
+    private String decayRelUncer;
 
     @Column
-    private Float decayStandUncer;
+    private String decayStandUncer;
 
-    public Table6(String groupId, Float mass, Float massRelUncer, Float massStandUncer, Float totalMass, Float totalMassRelUncer, Float totalMassStandUncer, Float distance, Float distanceRelUncer, Float distanceStandUncer, Float tZeros, Float tZerosRelUncer, Float tZerosStandUncer, Float tPeaks, Float tPeaksRelUncer, Float tPeaksStandUncer, Float relativeDeviation, Float damping, Float dampingRelUncer, Float dampingStandUncer, Float ownFrequency, Float ownFrequencyRelUncer, Float ownFrequencyStandUncer, Float oscillationFrequency, Float oscillationFrequencyRelUncer, Float oscillationFrequencyStandUncer, Float oscillationPeriod, Float oscillationPeriodRelUncer, Float oscillationPeriodStandUncer, Float qualityFactor, Float qualityFactorRelUncer, Float qualityFactorStandUncer, Float decay, Float decayRelUncer, Float decayStandUncer) {
+    public Table6(String open, String groupId, String mass, String massRelUncer, String massStandUncer, String totalMass, String totalMassRelUncer, String totalMassStandUncer, String distance, String distanceRelUncer, String distanceStandUncer, String tZeros, String tZerosRelUncer, String tZerosStandUncer, String tPeaks, String tPeaksRelUncer, String tPeaksStandUncer, String relativeDeviation, String damping, String dampingRelUncer, String dampingStandUncer, String ownFrequency, String ownFrequencyRelUncer, String ownFrequencyStandUncer, String oscillationFrequency, String oscillationFrequencyRelUncer, String oscillationFrequencyStandUncer, String oscillationPeriod, String oscillationPeriodRelUncer, String oscillationPeriodStandUncer, String qualityFactor, String qualityFactorRelUncer, String qualityFactorStandUncer, String decay, String decayRelUncer, String decayStandUncer) {
+        this.open = open;
         this.groupId = groupId;
         this.mass = mass;
         this.massRelUncer = massRelUncer;
@@ -157,6 +160,14 @@ public class Table6 {
     public Table6() {
     }
 
+    public String getOpen() {
+        return open;
+    }
+
+    public void setOpen(String open) {
+        this.open = open;
+    }
+
     public String getGroupId() {
         return groupId;
     }
@@ -165,275 +176,275 @@ public class Table6 {
         this.groupId = groupId;
     }
 
-    public Float getMass() {
+    public String getMass() {
         return mass;
     }
 
-    public void setMass(Float mass) {
+    public void setMass(String mass) {
         this.mass = mass;
     }
 
-    public Float getMassRelUncer() {
+    public String getMassRelUncer() {
         return massRelUncer;
     }
 
-    public void setMassRelUncer(Float massRelUncer) {
+    public void setMassRelUncer(String massRelUncer) {
         this.massRelUncer = massRelUncer;
     }
 
-    public Float getMassStandUncer() {
+    public String getMassStandUncer() {
         return massStandUncer;
     }
 
-    public void setMassStandUncer(Float massStandUncer) {
+    public void setMassStandUncer(String massStandUncer) {
         this.massStandUncer = massStandUncer;
     }
 
-    public Float getTotalMass() {
+    public String getTotalMass() {
         return totalMass;
     }
 
-    public void setTotalMass(Float totalMass) {
+    public void setTotalMass(String totalMass) {
         this.totalMass = totalMass;
     }
 
-    public Float getTotalMassRelUncer() {
+    public String getTotalMassRelUncer() {
         return totalMassRelUncer;
     }
 
-    public void setTotalMassRelUncer(Float totalMassRelUncer) {
+    public void setTotalMassRelUncer(String totalMassRelUncer) {
         this.totalMassRelUncer = totalMassRelUncer;
     }
 
-    public Float getTotalMassStandUncer() {
+    public String getTotalMassStandUncer() {
         return totalMassStandUncer;
     }
 
-    public void setTotalMassStandUncer(Float totalMassStandUncer) {
+    public void setTotalMassStandUncer(String totalMassStandUncer) {
         this.totalMassStandUncer = totalMassStandUncer;
     }
 
-    public Float getDistance() {
+    public String getDistance() {
         return distance;
     }
 
-    public void setDistance(Float distance) {
+    public void setDistance(String distance) {
         this.distance = distance;
     }
 
-    public Float getDistanceRelUncer() {
+    public String getDistanceRelUncer() {
         return distanceRelUncer;
     }
 
-    public void setDistanceRelUncer(Float distanceRelUncer) {
+    public void setDistanceRelUncer(String distanceRelUncer) {
         this.distanceRelUncer = distanceRelUncer;
     }
 
-    public Float getDistanceStandUncer() {
+    public String getDistanceStandUncer() {
         return distanceStandUncer;
     }
 
-    public void setDistanceStandUncer(Float distanceStandUncer) {
+    public void setDistanceStandUncer(String distanceStandUncer) {
         this.distanceStandUncer = distanceStandUncer;
     }
 
-    public Float gettZeros() {
+    public String gettZeros() {
         return tZeros;
     }
 
-    public void settZeros(Float tZeros) {
+    public void settZeros(String tZeros) {
         this.tZeros = tZeros;
     }
 
-    public Float gettZerosRelUncer() {
+    public String gettZerosRelUncer() {
         return tZerosRelUncer;
     }
 
-    public void settZerosRelUncer(Float tZerosRelUncer) {
+    public void settZerosRelUncer(String tZerosRelUncer) {
         this.tZerosRelUncer = tZerosRelUncer;
     }
 
-    public Float gettZerosStandUncer() {
+    public String gettZerosStandUncer() {
         return tZerosStandUncer;
     }
 
-    public void settZerosStandUncer(Float tZerosStandUncer) {
+    public void settZerosStandUncer(String tZerosStandUncer) {
         this.tZerosStandUncer = tZerosStandUncer;
     }
 
-    public Float gettPeaks() {
+    public String gettPeaks() {
         return tPeaks;
     }
 
-    public void settPeaks(Float tPeaks) {
+    public void settPeaks(String tPeaks) {
         this.tPeaks = tPeaks;
     }
 
-    public Float gettPeaksRelUncer() {
+    public String gettPeaksRelUncer() {
         return tPeaksRelUncer;
     }
 
-    public void settPeaksRelUncer(Float tPeaksRelUncer) {
+    public void settPeaksRelUncer(String tPeaksRelUncer) {
         this.tPeaksRelUncer = tPeaksRelUncer;
     }
 
-    public Float gettPeaksStandUncer() {
+    public String gettPeaksStandUncer() {
         return tPeaksStandUncer;
     }
 
-    public void settPeaksStandUncer(Float tPeaksStandUncer) {
+    public void settPeaksStandUncer(String tPeaksStandUncer) {
         this.tPeaksStandUncer = tPeaksStandUncer;
     }
 
-    public Float getRelativeDeviation() {
+    public String getRelativeDeviation() {
         return relativeDeviation;
     }
 
-    public void setRelativeDeviation(Float relativeDeviation) {
+    public void setRelativeDeviation(String relativeDeviation) {
         this.relativeDeviation = relativeDeviation;
     }
 
-    public Float getDamping() {
+    public String getDamping() {
         return damping;
     }
 
-    public void setDamping(Float damping) {
+    public void setDamping(String damping) {
         this.damping = damping;
     }
 
-    public Float getDampingRelUncer() {
+    public String getDampingRelUncer() {
         return dampingRelUncer;
     }
 
-    public void setDampingRelUncer(Float dampingRelUncer) {
+    public void setDampingRelUncer(String dampingRelUncer) {
         this.dampingRelUncer = dampingRelUncer;
     }
 
-    public Float getDampingStandUncer() {
+    public String getDampingStandUncer() {
         return dampingStandUncer;
     }
 
-    public void setDampingStandUncer(Float dampingStandUncer) {
+    public void setDampingStandUncer(String dampingStandUncer) {
         this.dampingStandUncer = dampingStandUncer;
     }
 
-    public Float getOwnFrequency() {
+    public String getOwnFrequency() {
         return ownFrequency;
     }
 
-    public void setOwnFrequency(Float ownFrequency) {
+    public void setOwnFrequency(String ownFrequency) {
         this.ownFrequency = ownFrequency;
     }
 
-    public Float getOwnFrequencyRelUncer() {
+    public String getOwnFrequencyRelUncer() {
         return ownFrequencyRelUncer;
     }
 
-    public void setOwnFrequencyRelUncer(Float ownFrequencyRelUncer) {
+    public void setOwnFrequencyRelUncer(String ownFrequencyRelUncer) {
         this.ownFrequencyRelUncer = ownFrequencyRelUncer;
     }
 
-    public Float getOwnFrequencyStandUncer() {
+    public String getOwnFrequencyStandUncer() {
         return ownFrequencyStandUncer;
     }
 
-    public void setOwnFrequencyStandUncer(Float ownFrequencyStandUncer) {
+    public void setOwnFrequencyStandUncer(String ownFrequencyStandUncer) {
         this.ownFrequencyStandUncer = ownFrequencyStandUncer;
     }
 
-    public Float getOscillationFrequency() {
+    public String getOscillationFrequency() {
         return oscillationFrequency;
     }
 
-    public void setOscillationFrequency(Float oscillationFrequency) {
+    public void setOscillationFrequency(String oscillationFrequency) {
         this.oscillationFrequency = oscillationFrequency;
     }
 
-    public Float getOscillationFrequencyRelUncer() {
+    public String getOscillationFrequencyRelUncer() {
         return oscillationFrequencyRelUncer;
     }
 
-    public void setOscillationFrequencyRelUncer(Float oscillationFrequencyRelUncer) {
+    public void setOscillationFrequencyRelUncer(String oscillationFrequencyRelUncer) {
         this.oscillationFrequencyRelUncer = oscillationFrequencyRelUncer;
     }
 
-    public Float getOscillationFrequencyStandUncer() {
+    public String getOscillationFrequencyStandUncer() {
         return oscillationFrequencyStandUncer;
     }
 
-    public void setOscillationFrequencyStandUncer(Float oscillationFrequencyStandUncer) {
+    public void setOscillationFrequencyStandUncer(String oscillationFrequencyStandUncer) {
         this.oscillationFrequencyStandUncer = oscillationFrequencyStandUncer;
     }
 
-    public Float getOscillationPeriod() {
+    public String getOscillationPeriod() {
         return oscillationPeriod;
     }
 
-    public void setOscillationPeriod(Float oscillationPeriod) {
+    public void setOscillationPeriod(String oscillationPeriod) {
         this.oscillationPeriod = oscillationPeriod;
     }
 
-    public Float getOscillationPeriodRelUncer() {
+    public String getOscillationPeriodRelUncer() {
         return oscillationPeriodRelUncer;
     }
 
-    public void setOscillationPeriodRelUncer(Float oscillationPeriodRelUncer) {
+    public void setOscillationPeriodRelUncer(String oscillationPeriodRelUncer) {
         this.oscillationPeriodRelUncer = oscillationPeriodRelUncer;
     }
 
-    public Float getOscillationPeriodStandUncer() {
+    public String getOscillationPeriodStandUncer() {
         return oscillationPeriodStandUncer;
     }
 
-    public void setOscillationPeriodStandUncer(Float oscillationPeriodStandUncer) {
+    public void setOscillationPeriodStandUncer(String oscillationPeriodStandUncer) {
         this.oscillationPeriodStandUncer = oscillationPeriodStandUncer;
     }
 
-    public Float getQualityFactor() {
+    public String getQualityFactor() {
         return qualityFactor;
     }
 
-    public void setQualityFactor(Float qualityFactor) {
+    public void setQualityFactor(String qualityFactor) {
         this.qualityFactor = qualityFactor;
     }
 
-    public Float getQualityFactorRelUncer() {
+    public String getQualityFactorRelUncer() {
         return qualityFactorRelUncer;
     }
 
-    public void setQualityFactorRelUncer(Float qualityFactorRelUncer) {
+    public void setQualityFactorRelUncer(String qualityFactorRelUncer) {
         this.qualityFactorRelUncer = qualityFactorRelUncer;
     }
 
-    public Float getQualityFactorStandUncer() {
+    public String getQualityFactorStandUncer() {
         return qualityFactorStandUncer;
     }
 
-    public void setQualityFactorStandUncer(Float qualityFactorStandUncer) {
+    public void setQualityFactorStandUncer(String qualityFactorStandUncer) {
         this.qualityFactorStandUncer = qualityFactorStandUncer;
     }
 
-    public Float getDecay() {
+    public String getDecay() {
         return decay;
     }
 
-    public void setDecay(Float decay) {
+    public void setDecay(String decay) {
         this.decay = decay;
     }
 
-    public Float getDecayRelUncer() {
+    public String getDecayRelUncer() {
         return decayRelUncer;
     }
 
-    public void setDecayRelUncer(Float decayRelUncer) {
+    public void setDecayRelUncer(String decayRelUncer) {
         this.decayRelUncer = decayRelUncer;
     }
 
-    public Float getDecayStandUncer() {
+    public String getDecayStandUncer() {
         return decayStandUncer;
     }
 
-    public void setDecayStandUncer(Float decayStandUncer) {
+    public void setDecayStandUncer(String decayStandUncer) {
         this.decayStandUncer = decayStandUncer;
     }
 }

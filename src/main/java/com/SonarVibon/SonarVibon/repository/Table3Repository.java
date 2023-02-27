@@ -12,6 +12,8 @@ import java.util.List;
 public interface Table3Repository extends JpaRepository<Table3,String> {
 
     @Query("SELECT f FROM Table3 f where f.groupId = :groupId")
-    List<Table3> getAllHookeDataByGroupId(@Param("groupId") String groupId);
+    Table3 getHookeLawDataByGroupId(@Param("groupId") String groupId);
 
+    @Query("SELECT f FROM Table3 f where f.open = :open")
+    List<Table3> getAllOpen(@Param("open") String open);
 }
